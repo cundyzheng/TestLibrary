@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "TapTalk"
+  s.name         = "TapTalko"
   s.version      = "1.0.4"
   s.summary      = "Powerful Chat Engine"
 
