@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "TapTalkee"
-  s.version      = "1.0.0"
-  s.summary      = "Beautiful Chat Engine"
+  s.name         = "TapTalk"
+  s.version      = "1.0.4"
+  s.summary      = "Powerful Chat Engine"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
 
 #   s.source       = { :path => '.' }
 #    s.source       = { :git => 'git@git.taptalk.io:ios/taptalk-ios.git', :tag => '1.0.3' }
-    s.source = { :http => "https://www.dropbox.com/s/zmj6gapiy3nfo6e/Binaries.zip?dl=0" }
+    s.source = { :http => "https://www.dropbox.com/s/l94gcfbogeys8cn/Binaries.zip?dl=0" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
