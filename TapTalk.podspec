@@ -37,8 +37,13 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT"
+#s.license      = "MIT"
   # s.license      = s.source       = { :path => '.' }
+s.license = { :type => 'MIT', :text => <<-LICENSE
+Copyright 2012
+Permission is granted to...
+LICENSE
+}
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -79,7 +84,7 @@ Pod::Spec.new do |s|
 
 #   s.source       = { :path => '.' }
 #    s.source       = { :git => 'git@git.taptalk.io:ios/taptalk-ios.git', :tag => '1.0.3' }
-    s.source = { :http => "https://www.dropbox.com/s/l94gcfbogeys8cn/Binaries.zip?dl=0" }
+    s.source = { :http => "https://www.dropbox.com/s/2hwj0udrril0ios/Binaries.zip?dl=0" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -124,6 +129,9 @@ Pod::Spec.new do |s|
   # s.libraries = "iconv", "xml2"
   
 #   s.vendored_frameworks = 'GooglePlacePicker.framework', 'GooglePlaces.framework', 'GoogleMaps.framework', 'GoogleMapsCore.framework'
+
+s.ios.vendored_frameworks = 'TapTalk.framework'
+
 
    s.static_framework = true
 

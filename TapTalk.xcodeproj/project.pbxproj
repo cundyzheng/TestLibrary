@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8E147AE6E372DF5ACED98A98 /* Pods_TapTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201160F6FC92EF9549147462 /* Pods_TapTalk.framework */; };
-		B357EBB92158F7E50049E288 /* TapTalk.h in Headers */ = {isa = PBXBuildFile; fileRef = B357EBB72158F7E50049E288 /* TapTalk.h */; };
+		B357EBB92158F7E50049E288 /* TapTalk.h in Headers */ = {isa = PBXBuildFile; fileRef = B357EBB72158F7E50049E288 /* TapTalk.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B357EBBA2158F7E50049E288 /* TapTalk.m in Sources */ = {isa = PBXBuildFile; fileRef = B357EBB82158F7E50049E288 /* TapTalk.m */; };
 		B681FA4E21F04D190074749B /* TAPFileUploadManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B681FA4C21F04D180074749B /* TAPFileUploadManager.h */; };
 		B681FA4F21F04D190074749B /* TAPFileUploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B681FA4D21F04D180074749B /* TAPFileUploadManager.m */; };
@@ -204,7 +204,7 @@
 		D77B5F5E2158BBEA00253BDC /* TAPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77B5F422158BBEA00253BDC /* TAPBaseViewController.m */; };
 		D77B5F602158BBEA00253BDC /* TAPAddNewContactViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D77B5F442158BBEA00253BDC /* TAPAddNewContactViewController.h */; };
 		D77B5F612158BBEA00253BDC /* TAPScanQRCodeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D77B5F452158BBEA00253BDC /* TAPScanQRCodeViewController.h */; };
-		D77B5F622158BBEA00253BDC /* TAPRoomListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D77B5F462158BBEA00253BDC /* TAPRoomListViewController.h */; };
+		D77B5F622158BBEA00253BDC /* TAPRoomListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D77B5F462158BBEA00253BDC /* TAPRoomListViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D77B5F632158BBEA00253BDC /* TAPAddNewContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77B5F472158BBEA00253BDC /* TAPAddNewContactViewController.m */; };
 		D77B5F642158BBEA00253BDC /* TAPBlockedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77B5F482158BBEA00253BDC /* TAPBlockedListViewController.m */; };
 		D77B5F662158BBEA00253BDC /* TAPRoomListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77B5F4A2158BBEA00253BDC /* TAPRoomListViewController.m */; };
@@ -1378,6 +1378,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D77B5F622158BBEA00253BDC /* TAPRoomListViewController.h in Headers */,
+				B357EBB92158F7E50049E288 /* TapTalk.h in Headers */,
 				D77B5ED32158BB6E00253BDC /* TAPGroupModel.h in Headers */,
 				D7F986E92251BB1B0087B652 /* TAPCustomTextFieldView.h in Headers */,
 				D77B5F282158BB9500253BDC /* TAPCreateGroupView.h in Headers */,
@@ -1391,7 +1393,6 @@
 				D77866BF224205C000A98F05 /* TAPFetchMediaManager.h in Headers */,
 				D73F43102237A26900E9789B /* TAPScanQRCodePopupViewController.h in Headers */,
 				D769A2F122535A820059DC9B /* TAPRegisterViewController.h in Headers */,
-				B357EBB92158F7E50049E288 /* TapTalk.h in Headers */,
 				B681FA5621F707470074749B /* Base64.h in Headers */,
 				D77B5F2E2158BB9500253BDC /* TAPBaseView.h in Headers */,
 				D778FAA0221D7FA3000E3A00 /* TAPLocationSearchBarView.h in Headers */,
@@ -1431,7 +1432,6 @@
 				D77B5F6B2158BBEA00253BDC /* TAPBaseViewController.h in Headers */,
 				D7E26BE1225E042200B50506 /* TAPYourVideoBubbleTableViewCell.h in Headers */,
 				D76948BA21B10D2B00AE0BE6 /* TAPCustomBubbleManager.h in Headers */,
-				D77B5F622158BBEA00253BDC /* TAPRoomListViewController.h in Headers */,
 				D754CFB42216ECC6008CE9F9 /* TAPPickLocationView.h in Headers */,
 				DF51326322F822F700BE4BC8 /* TAPMediaDetailViewController.h in Headers */,
 				D71582F2217EE99700649C70 /* TAPNotificationManager.h in Headers */,
