@@ -130,6 +130,9 @@ LICENSE
   
 #   s.vendored_frameworks = 'GooglePlacePicker.framework', 'GooglePlaces.framework', 'GoogleMaps.framework', 'GoogleMapsCore.framework'
 
+s.ios.vendored_frameworks = 'TapTalk.framework'
+
+
    s.static_framework = true
 
 
