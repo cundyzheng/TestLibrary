@@ -89,7 +89,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-    s.source_files  = "TapTalk", "TapTalk/*{h,m}", "TapTalk/**/*.{h,m}", "TapTalk/**/**/*.{h,m}"
+# s.source_files  = "TapTalk", "TapTalk/*{h,m}", "TapTalk/**/*.{h,m}", "TapTalk/**/**/*.{h,m}"
 
   # s.exclude_files = "Classes/Exclude", "TapTalk/**/*.plist"
 
@@ -104,7 +104,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-    s.resources = "TapTalk/**/*.{png,jpeg,jpg,storyboard,xib,xcassets,ttf,otf}"
+# s.resources = "TapTalk/**/*.{png,jpeg,jpg,storyboard,xib,xcassets,ttf,otf}"
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
@@ -158,16 +158,16 @@ Pod::Spec.new do |s|
 
     # ――― Bundle ------―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
     
-    s.resource_bundles = {
-        'TapTalk' => [
-            'Pod/**/*.xib',
-            'Pod/**/*.storyboard',
-            'Pod/**/*.{png,jpeg,jpg,xcassets,ttf,otf,caf}',
-            'TapTalk/**/*.xib',
-            'TapTalk/**/*.storyboard',
-            'TapTalk/**/*.{png,jpeg,jpg,xcassets,ttf,otf,caf}'
-        ]
-    }
+#  s.resource_bundles = {
+#      'TapTalk' => [
+#          'Pod/**/*.xib',
+#          'Pod/**/*.storyboard',
+#           'Pod/**/*.{png,jpeg,jpg,xcassets,ttf,otf,caf}',
+#           'TapTalk/**/*.xib',
+#           'TapTalk/**/*.storyboard',
+#           'TapTalk/**/*.{png,jpeg,jpg,xcassets,ttf,otf,caf}'
+#       ]
+#   }
 
 
     # ――― XCConfig ------―――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
