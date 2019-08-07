@@ -13,7 +13,7 @@
 #import "TAPReplyToModel.h"
 #import "TAPForwardFromModel.h"
 #import "TAPGroupTargetModel.h"
-#import "Configs.h"
+#import "TAPConfigs.h"
 #import "TAPChatMessageType.h"
 
 @interface TAPMessageModel : TAPBaseModel

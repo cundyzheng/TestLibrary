@@ -214,7 +214,7 @@
 		D77B5F6E2158BBEA00253BDC /* TAPCustomNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = D77B5F522158BBEA00253BDC /* TAPCustomNavigationController.h */; };
 		D77B5F6F2158BBEA00253BDC /* TAPPopUpInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77B5F532158BBEA00253BDC /* TAPPopUpInfoViewController.m */; };
 		D77B5F732158BC0B00253BDC /* TapTalk-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = D77B5F712158BC0B00253BDC /* TapTalk-Prefix.pch */; };
-		D77B5F752158BC7A00253BDC /* Configs.h in Headers */ = {isa = PBXBuildFile; fileRef = D77B5F742158BC7A00253BDC /* Configs.h */; };
+		D77B5F752158BC7A00253BDC /* TAPConfigs.h in Headers */ = {isa = PBXBuildFile; fileRef = D77B5F742158BC7A00253BDC /* TAPConfigs.h */; };
 		D780A08321AE656E001D673D /* TAPBaseMyBubbleTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D780A08021AE656E001D673D /* TAPBaseMyBubbleTableViewCell.h */; };
 		D780A08421AE656E001D673D /* TAPBaseMyBubbleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D780A08121AE656E001D673D /* TAPBaseMyBubbleTableViewCell.m */; };
 		D780A08521AE656E001D673D /* TAPBaseMyBubbleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D780A08221AE656E001D673D /* TAPBaseMyBubbleTableViewCell.xib */; };
@@ -608,7 +608,7 @@
 		D77B5F522158BBEA00253BDC /* TAPCustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPCustomNavigationController.h; sourceTree = "<group>"; };
 		D77B5F532158BBEA00253BDC /* TAPPopUpInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPPopUpInfoViewController.m; sourceTree = "<group>"; };
 		D77B5F712158BC0B00253BDC /* TapTalk-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TapTalk-Prefix.pch"; sourceTree = "<group>"; };
-		D77B5F742158BC7A00253BDC /* Configs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configs.h; sourceTree = "<group>"; };
+		D77B5F742158BC7A00253BDC /* TAPConfigs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPConfigs.h; sourceTree = "<group>"; };
 		D77B5F8A2158BEE000253BDC /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebP.framework; sourceTree = "<group>"; };
 		D780A08021AE656E001D673D /* TAPBaseMyBubbleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAPBaseMyBubbleTableViewCell.h; sourceTree = "<group>"; };
 		D780A08121AE656E001D673D /* TAPBaseMyBubbleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAPBaseMyBubbleTableViewCell.m; sourceTree = "<group>"; };
@@ -1034,7 +1034,7 @@
 				D77B5F762158BC7D00253BDC /* Fonts */,
 				D77B5F712158BC0B00253BDC /* TapTalk-Prefix.pch */,
 				D77B5E4D2158BA8C00253BDC /* Info.plist */,
-				D77B5F742158BC7A00253BDC /* Configs.h */,
+				D77B5F742158BC7A00253BDC /* TAPConfigs.h */,
 				D75EC5F0229669B800A4F435 /* TAPChatMessageType.h */,
 				D7683F6C22B8C458003420DB /* TAPStyle.h */,
 			);
@@ -1506,7 +1506,7 @@
 				DFA598FF21B7B17D0082C5F3 /* TAPOnlineStatusModel.h in Headers */,
 				D77B5ECF2158BB6E00253BDC /* TAPMessageModel.h in Headers */,
 				D77B5F032158BB8700253BDC /* TAPNewChatAddNewContactTableViewCell.h in Headers */,
-				D77B5F752158BC7A00253BDC /* Configs.h in Headers */,
+				D77B5F752158BC7A00253BDC /* TAPConfigs.h in Headers */,
 				DF51326822F8232500BE4BC8 /* TAPMediaDetailPreviewView.h in Headers */,
 				D780A08821AEC413001D673D /* TAPBaseGeneralBubbleTableViewCell.h in Headers */,
 				DFF60D5A225B44B40038FB4D /* TAPLeftCustomNavigationButton.h in Headers */,
