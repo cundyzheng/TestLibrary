@@ -84,7 +84,7 @@ LICENSE
 
 #   s.source       = { :path => '.' }
 #    s.source       = { :git => 'git@git.taptalk.io:ios/taptalk-ios.git', :tag => '1.0.3' }
-    s.source = { :http => "https://www.dropbox.com/s/2hwj0udrril0ios/Binaries.zip?dl=0" }
+    s.source = { :http => "https://www.dropbox.com/s/89n0i6wa2nkxgx2/Binaries.zip?dl=0" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -94,7 +94,7 @@ LICENSE
   #  Not including the public_header_files will make all headers public.
   #
 
-# s.source_files  = "TapTalk", "TapTalk/*{h,m}", "TapTalk/**/*.{h,m}", "TapTalk/**/**/*.{h,m}"
+#s.source_files  = "TapTalk", "TapTalk/*{h,m}", "TapTalk/**/*.{h,m}", "TapTalk/**/**/*.{h,m}"
 
   # s.exclude_files = "Classes/Exclude", "TapTalk/**/*.plist"
 
@@ -131,10 +131,9 @@ LICENSE
 #   s.vendored_frameworks = 'GooglePlacePicker.framework', 'GooglePlaces.framework', 'GoogleMaps.framework', 'GoogleMapsCore.framework'
 
 s.ios.vendored_frameworks = 'TapTalk.framework'
-
+s.source_files  = "TapTalk", "TapTalk/TapTalk.h"
 
    s.static_framework = true
-
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
