@@ -84,7 +84,7 @@ LICENSE
 
 #   s.source       = { :path => '.' }
 #    s.source       = { :git => 'git@git.taptalk.io:ios/taptalk-ios.git', :tag => '1.0.3' }
-    s.source = { :http => "https://www.dropbox.com/s/ec496i9t2xh985p/Binaries.zip?dl=0" }
+    s.source = { :http => "https://www.dropbox.com/s/gjl2aflo4da13c4/Binaries.zip?dl=0" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -130,7 +130,7 @@ LICENSE
   
 #   s.vendored_frameworks = 'GooglePlacePicker.framework', 'GooglePlaces.framework', 'GoogleMaps.framework', 'GoogleMapsCore.framework'
 
-#s.ios.vendored_frameworks = "TapTalk/TapTalk.framework"
+s.ios.vendored_frameworks = "TapTalk/TapTalk.framework"
 #s.source_files  = "TapTalk/*.{h,m}"
 
 s.static_framework = true
