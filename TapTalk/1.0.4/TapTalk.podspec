@@ -133,7 +133,7 @@ LICENSE
 #s.ios.vendored_frameworks = "TapTalk/TapTalk.framework"
 #s.source_files  = "TapTalk/*.{h,m}"
 
-s.static_framework = true
+#s.static_framework = true
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
