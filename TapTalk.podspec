@@ -84,7 +84,7 @@ LICENSE
 
 #   s.source       = { :path => '.' }
 #    s.source       = { :git => 'git@git.taptalk.io:ios/taptalk-ios.git', :tag => '1.0.3' }
-    s.source = { :http => "https://www.dropbox.com/s/sbh90mkc81zhaxg/Binaries.zip?dl=0" }
+    s.source = { :http => "https://www.dropbox.com/s/0ado7l6f4a3gl2i/Binaries.zip?dl=0" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -133,6 +133,8 @@ LICENSE
 #s.ios.vendored_frameworks = "TapTalk/TapTalk.framework"
 #s.source_files  = "TapTalk/*.{h,m}"
 
+s.ios.deployment_target = '11.0'
+s.ios.vendored_frameworks = 'TapTalk.framework'
 s.static_framework = true
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
