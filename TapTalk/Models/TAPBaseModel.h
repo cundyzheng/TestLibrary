@@ -6,7 +6,8 @@
 //  Copyright © 2017 Moselo. All rights reserved.
 //
 
-@import JSONModel;
+//@import JSONModel;
+#import <JSONModel/JSONModel.h>
 
 @interface TAPBaseModel : JSONModel
 
