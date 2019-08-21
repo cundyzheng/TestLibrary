@@ -134,7 +134,7 @@ LICENSE
 #s.source_files  = "TapTalk/*.{h,m}"
 
 s.ios.deployment_target = '11.0'
-s.ios.vendored_frameworks = 'TapTalk.framework'
+#s.ios.vendored_frameworks = 'TapTalk.framework'
 s.static_framework = true
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
