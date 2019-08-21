@@ -45,7 +45,8 @@
 
 #import "TAPQuoteModel.h"
 
-@import QuickLook;
+//@import QuickLook;
+#import <QuickLook/QuickLook.h>
 
 static const NSInteger kShowChatAnchorOffset = 70.0f;
 static const NSInteger kChatAnchorDefaultBottomConstraint = 63.0f;

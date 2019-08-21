@@ -11,8 +11,11 @@
 #import "TAPPinLocationSearchResultTableViewCell.h"
 #import <MapKit/MapKit.h>
 
-@import GooglePlaces;
-@import GoogleMaps;
+//@import GooglePlaces;
+//@import GoogleMaps;
+#import <GooglePlaces/GooglePlaces.h>
+#import <GoogleMaps/GoogleMaps.h>
+
 
 @interface TAPPickLocationViewController () <TAPLocationSearchBarViewDelegate, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
 
