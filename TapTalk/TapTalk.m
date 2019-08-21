@@ -9,9 +9,9 @@
 #import "TapTalk.h"
 #import "TAPProfileViewController.h"
 
-@import AFNetworking;
-@import GooglePlaces;
-@import GoogleMaps;
+//@import AFNetworking;
+//@import GooglePlaces;
+//@import GoogleMaps;
 #import <AFNetworking/AFNetworking.h>
 #import <GooglePlaces/GooglePlaces.h>
 #import <GoogleMaps/GoogleMaps.h>
