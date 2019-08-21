@@ -83,8 +83,8 @@ LICENSE
   #
 
 #   s.source       = { :path => '.' }
-#    s.source       = { :git => 'git@git.taptalk.io:ios/taptalk-ios.git', :tag => '1.0.3' }
-    s.source = { :http => "https://www.dropbox.com/s/0ado7l6f4a3gl2i/Binaries.zip?dl=0" }
+    s.source       = { :git => 'git => 'https://github.com/cundyzheng/TestLibrary.git', :tag => '1.0.7' }
+#    s.source = { :http => "https://www.dropbox.com/s/0ado7l6f4a3gl2i/Binaries.zip?dl=0" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
