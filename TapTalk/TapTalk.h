@@ -24,6 +24,8 @@
 #import <AVKit/AVKit.h>
 #import <Photos/Photos.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 //! Project version number for TapTalk.
 FOUNDATION_EXPORT double TapTalkVersionNumber;
 
@@ -187,3 +189,4 @@ fromNavigationController:(UINavigationController *)navigationController
 - (void)setBadgeWithNumberOfUnreadRooms:(NSInteger)numberOfUnreadRooms;
 
 @end
+NS_ASSUME_NONNULL_END
