@@ -78,7 +78,7 @@ s.platform     = :ios, "10.0"
 #
 
 #   s.source       = { :path => '.' }
-s.source       = { :git => 'https://github.com/cundyzheng/TestLibrary.git', :tag => '1.0.6' }
+s.source       = { :git => 'https://github.com/cundyzheng/TestLibrary.git', :tag => '1.0.7' }
 
 # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 #
