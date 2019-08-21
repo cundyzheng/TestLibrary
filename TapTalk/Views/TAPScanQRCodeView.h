@@ -9,7 +9,8 @@
 #import "TAPBaseView.h"
 #import <AVFoundation/AVFoundation.h>
 
-@import ZBarSDK;
+//@import ZBarSDK;
+#import <ZBarSDK/ZBarSDK.h>
 
 typedef NS_ENUM(NSInteger, ScanQRCodeViewType) {
     ScanQRCodeViewTypeScanQRCode = 0,
