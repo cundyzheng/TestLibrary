@@ -20,7 +20,8 @@ s.author             = { "Ritchie Nathaniel" => "ritchie@moselo.com" }
 
 s.source = { :http => "https://www.dropbox.com/s/0ado7l6f4a3gl2i/Binaries.zip?dl=0" }
 
-#s.vendored_frameworks = "TapTalk.framework"
+s.ios.deployment_target = '10.0'
+#s.vendored_frameworks = 'TapTalk.framework'
 
 s.static_framework = true
 
