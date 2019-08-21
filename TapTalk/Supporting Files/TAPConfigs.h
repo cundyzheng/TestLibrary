@@ -1,4 +1,4 @@
-// Configs.h
+// TAPConfigs.h
 
 //Application
 //#define TAP_SECURE_KEY_NSUSERDEFAULTS @"h0m1ngp1g30n-m0s3l0-81191E@c"

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TapTalk"
-  s.version      = "1.0.5"
+  s.version      = "1.0.6"
   s.summary      = "Powerful Chat Engine"
 
   # This description is used to generate tags and improve search results.
@@ -134,8 +134,8 @@ LICENSE
 #s.source_files  = "TapTalk/*.{h,m}"
 
 s.ios.deployment_target = '10.0'
-#s.ios.vendored_frameworks = 'TapTalk.framework'
-s.static_framework = true
+#s.vendored_frameworks = 'TapTalk.framework'
+#s.static_framework = true
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
