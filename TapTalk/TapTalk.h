@@ -24,8 +24,6 @@
 #import <AVKit/AVKit.h>
 #import <Photos/Photos.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 //! Project version number for TapTalk.
 FOUNDATION_EXPORT double TapTalkVersionNumber;
 
@@ -46,29 +44,29 @@ typedef NS_ENUM(NSInteger, TapTalkEnvironment) {
 @protocol TapTalkDelegate <NSObject>
 
 - (void)tapTalkShouldResetAuthTicket;
-- (void)tapTalkDidTappedNotificationWithMessage:(TAPMessageModel * _Nonnull)message fromActiveController:(UIViewController *)currentActiveController;
+- (void)tapTalkDidTappedNotificationWithMessage:(TAPMessageModel * _Nonnull)message fromActiveController:(UIViewController * _Nonnull)currentActiveController;
 
 @optional
 //User Profile
-- (void)tapTalkProfileButtonDidTapped:(UIViewController *)viewController
-                            otherUser:(TAPUserModel *)otherUser;
+- (void)tapTalkProfileButtonDidTapped:(UIViewController * _Nonnull)viewController
+                            otherUser:(TAPUserModel * _Nonnull)otherUser;
 
 //Custom Keyboard
-- (void)tapTalkCustomKeyboardDidTappedWithSender:(TAPUserModel *)sender
-                                       recipient:(TAPUserModel *)recipient
-                                            room:(TAPRoomModel *)room
-                                    keyboardItem:(TAPCustomKeyboardItemModel *)keyboardItem;
+- (void)tapTalkCustomKeyboardDidTappedWithSender:(TAPUserModel * _Nonnull)sender
+                                       recipient:(TAPUserModel * _Nonnull)recipient
+                                            room:(TAPRoomModel * _Nonnull)room
+                                    keyboardItem:(TAPCustomKeyboardItemModel * _Nonnull)keyboardItem;
 
-- (NSArray<TAPCustomKeyboardItemModel *> *)tapTalkCustomKeyboardForSender:(TAPUserModel *)sender
-                                                                recipient:(TAPUserModel *)recipient;
+- (NSArray<TAPCustomKeyboardItemModel *> * _Nonnull)tapTalkCustomKeyboardForSender:(TAPUserModel * _Nonnull)sender
+                                                                recipient:(TAPUserModel * _Nonnull)recipient;
 
 //Product List
-- (void)tapTalkProductListBubbleLeftOrSingleOptionDidTappedProduct:(TAPProductModel *)product room:(TAPRoomModel *)room recipient:(TAPUserModel *)recipient isSingleOption:(BOOL)isSingleOption;
+- (void)tapTalkProductListBubbleLeftOrSingleOptionDidTappedProduct:(TAPProductModel * _Nonnull)product room:(TAPRoomModel * _Nonnull)room recipient:(TAPUserModel * _Nonnull)recipient isSingleOption:(BOOL)isSingleOption;
 
-- (void)tapTalkProductListBubbleRightOptionDidTappedWithProduct:(TAPProductModel *)product room:(TAPRoomModel *)room recipient:(TAPUserModel *)recipient isSingleOption:(BOOL)isSingleOption;
+- (void)tapTalkProductListBubbleRightOptionDidTappedWithProduct:(TAPProductModel * _Nonnull)product room:(TAPRoomModel * _Nonnull)room recipient:(TAPUserModel * _Nonnull)recipient isSingleOption:(BOOL)isSingleOption;
 
 //Quote
-- (void)tapTalkQuoteDidTappedWithUserInfo:(NSDictionary *)userInfo;
+- (void)tapTalkQuoteDidTappedWithUserInfo:(NSDictionary * _Nonnull)userInfo;
 
 //Badge
 - (void)tapTalkSetBadgeWithNumberOfUnreadRooms:(NSInteger)numberOfUnreadRooms;
@@ -79,114 +77,114 @@ typedef NS_ENUM(NSInteger, TapTalkEnvironment) {
 @end
 
 @interface TapTalk : NSObject
-
+NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) UIWindow *activeWindow;
 @property (weak, nonatomic) id<TapTalkDelegate> delegate;
 @property (nonatomic) TapTalkInstanceState instanceState;
 @property (nonatomic) TapTalkEnvironment environment;
-
+NS_ASSUME_NONNULL_END
 //Initalization
-+ (TapTalk *)sharedInstance;
++ (TapTalk * _Nonnull)sharedInstance;
 
 //Authentication
-- (void)setAuthTicket:(NSString *)authTicket
-              success:(void (^)(void))success
-              failure:(void (^)(NSError *error))failure;
+- (void)setAuthTicket:(NSString * _Nonnull)authTicket
+              success:(void (^ _Nonnull)(void))success
+              failure:(void (^ _Nonnull)(NSError *  _Nonnull error))failure;
 - (BOOL)isAuthenticated;
 
 //Property
-- (TAPRoomListViewController *)roomListViewController;
-- (TAPLoginViewController *)loginViewController;
-- (TAPCustomNotificationAlertViewController *)customNotificationAlertViewController;
+- (TAPRoomListViewController *  _Nonnull)roomListViewController;
+- (TAPLoginViewController *  _Nonnull)loginViewController;
+- (TAPCustomNotificationAlertViewController *  _Nonnull)customNotificationAlertViewController;
 
 //AppDelegate Handling
-- (void)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions environment:(TapTalkEnvironment)environment;
-- (void)applicationWillResignActive:(UIApplication *)application;
-- (void)applicationDidEnterBackground:(UIApplication *)application;
-- (void)applicationWillEnterForeground:(UIApplication *)application;
-- (void)applicationDidBecomeActive:(UIApplication *)application;
-- (void)applicationWillTerminate:(UIApplication *)application;
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken;
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandler;
-- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification;
+- (void)application:(UIApplication * _Nonnull)application didFinishLaunchingWithOptions:(NSDictionary * _Nonnull)launchOptions environment:(TapTalkEnvironment)environment;
+- (void)applicationWillResignActive:(UIApplication * _Nonnull)application;
+- (void)applicationDidEnterBackground:(UIApplication * _Nonnull)application;
+- (void)applicationWillEnterForeground:(UIApplication * _Nonnull)application;
+- (void)applicationDidBecomeActive:(UIApplication * _Nonnull)application;
+- (void)applicationWillTerminate:(UIApplication * _Nonnull)application;
+- (void)application:(UIApplication * _Nonnull)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData * _Nonnull)deviceToken;
+- (void)application:(UIApplication * _Nonnull)application didReceiveRemoteNotification:(NSDictionary * _Nonnull)userInfo fetchCompletionHandler:(void (^ _Nonnull)(UIBackgroundFetchResult result))completionHandler;
+- (void)application:(UIApplication * _Nonnull)application didReceiveLocalNotification:(UILocalNotification * _Nonnull)notification;
 
 //Push Notification
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler;
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)())completionHandler;
+- (void)userNotificationCenter:(UNUserNotificationCenter * _Nonnull)center willPresentNotification:(UNNotification * _Nonnull)notification withCompletionHandler:(void (^ _Nonnull)(UNNotificationPresentationOptions options))completionHandler;
+- (void)userNotificationCenter:(UNUserNotificationCenter * _Nonnull)center didReceiveNotificationResponse:(UNNotificationResponse * _Nonnull)response withCompletionHandler:(void(^ _Nonnull)())completionHandler;
 
 //Exception Handling
-- (void)handleException:(NSException *)exception;
+- (void)handleException:(NSException * _Nonnull)exception;
 
 //Custom Method
 //General Set Up
-- (void)activateInAppNotificationInWindow:(UIWindow *)activeWindow;
+- (void)activateInAppNotificationInWindow:(UIWindow * _Nonnull)activeWindow;
 - (void)setEnvironment:(TapTalkEnvironment)environment;
-- (UINavigationController *)getCurrentTapTalkActiveNavigationController;
-- (UIViewController *)getCurrentTapTalkActiveViewController;
-- (void)setUserAgent:(NSString *)userAgent;
-- (void)setAppKeySecret:(NSString *)appKeySecret;
-- (void)setAppKeyID:(NSString *)appKeyID;
+- (UINavigationController * _Nonnull)getCurrentTapTalkActiveNavigationController;
+- (UIViewController * _Nonnull)getCurrentTapTalkActiveViewController;
+- (void)setUserAgent:(NSString * _Nonnull)userAgent;
+- (void)setAppKeySecret:(NSString * _Nonnull)appKeySecret;
+- (void)setAppKeyID:(NSString * _Nonnull)appKeyID;
 - (void)refreshActiveUser;
 - (void)updateUnreadBadgeCount;
-- (TAPUserModel *)getTapTalkActiveUser;
+- (TAPUserModel * _Nonnull)getTapTalkActiveUser;
 
 //Chat
-- (void)openRoomWithXCUserID:(NSString *)XCUserID
-               prefilledText:(NSString *)prefilledText
+- (void)openRoomWithXCUserID:(NSString * _Nonnull)XCUserID
+               prefilledText:(NSString * _Nonnull)prefilledText
                   quoteTitle:(nullable NSString *)quoteTitle
                 quoteContent:(nullable NSString *)quoteContent
          quoteImageURLString:(nullable NSString *)quoteImageURL
                     userInfo:(nullable NSDictionary *)userInfo
-    fromNavigationController:(UINavigationController *)navigationController
-                     success:(void (^)(void))success
-                     failure:(void (^)(NSError *error))failure;
-- (void)openRoomWithRoom:(TAPRoomModel *)room
+    fromNavigationController:(UINavigationController * _Nonnull)navigationController
+                     success:(void (^ _Nonnull)(void))success
+                     failure:(void (^ _Nonnull)(NSError * _Nonnull error))failure;
+- (void)openRoomWithRoom:(TAPRoomModel * _Nonnull)room
               quoteTitle:(nullable NSString *)quoteTitle
             quoteContent:(nullable NSString *)quoteContent
      quoteImageURLString:(nullable NSString *)quoteImageURL
                 userInfo:(nullable NSDictionary *)userInfo
-fromNavigationController:(UINavigationController *)navigationController
+fromNavigationController:(UINavigationController * _Nonnull)navigationController
                 animated:(BOOL)isAnimated;
-- (void)openRoomWithOtherUser:(TAPUserModel *)otherUser
-     fromNavigationController:(UINavigationController *)navigationController;
-- (void)openRoomWithRoom:(TAPRoomModel *)room
-fromNavigationController:(UINavigationController *)navigationController
+- (void)openRoomWithOtherUser:(TAPUserModel * _Nonnull)otherUser
+     fromNavigationController:(UINavigationController * _Nonnull)navigationController;
+- (void)openRoomWithRoom:(TAPRoomModel * _Nonnull)room
+fromNavigationController:(UINavigationController * _Nonnull)navigationController
                 animated:(BOOL)isAnimated;
-- (void)openRoomWithRoom:(TAPRoomModel *)room
-scrollToMessageWithLocalID:(NSString *)messageLocalID
-fromNavigationController:(UINavigationController *)navigationController
+- (void)openRoomWithRoom:(TAPRoomModel * _Nonnull)room
+scrollToMessageWithLocalID:(NSString * _Nonnull)messageLocalID
+fromNavigationController:(UINavigationController * _Nonnull)navigationController
                 animated:(BOOL)isAnimated;
 - (void)shouldRefreshAuthTicket;
-- (void)sendTextMessage:(NSString *)message recipientUser:(TAPUserModel *)recipient success:(void (^)(void))success failure:(void (^)(NSError *error))failure;
-- (void)sendProductMessage:(NSArray<TAPProductModel *> *)productArray recipientUser:(TAPUserModel *)recipient success:(void (^)(void))success failure:(void (^)(NSError *error))failure;
-- (void)sendImageMessage:(UIImage *)image caption:(nullable NSString *)caption recipientUser:(TAPUserModel *)recipient success:(void (^)(void))success failure:(void (^)(NSError *error))failure;
-- (void)sendImageMessageWithAsset:(PHAsset *)asset caption:(nullable NSString *)caption recipientUser:(TAPUserModel *)recipient success:(void (^)(void))success failure:(void (^)(NSError *error))failure;
-- (void)getTapTalkUserWithClientUserID:(NSString *)clientUserID success:(void (^)(TAPUserModel *tapTalkUser))success failure:(void (^)(NSError *error))failure;
+- (void)sendTextMessage:(NSString * _Nonnull)message recipientUser:(TAPUserModel * _Nonnull)recipient success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NSError * _Nonnull error))failure;
+- (void)sendProductMessage:(NSArray<TAPProductModel *> * _Nonnull)productArray recipientUser:(TAPUserModel * _Nonnull)recipient success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NSError *error))failure;
+- (void)sendImageMessage:(UIImage * _Nonnull)image caption:(nullable NSString *)caption recipientUser:(TAPUserModel * _Nonnull)recipient success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NSError *error))failure;
+- (void)sendImageMessageWithAsset:(PHAsset * _Nonnull)asset caption:(nullable NSString *)caption recipientUser:(TAPUserModel * _Nonnull)recipient success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NSError * _Nonnull error))failure;
+- (void)getTapTalkUserWithClientUserID:(NSString * _Nonnull)clientUserID success:(void (^ _Nonnull)(TAPUserModel *  _Nonnull tapTalkUser))success failure:(void (^ _Nonnull)(NSError *  _Nonnull error))failure;
 
 
 //Custom Keyboard
-- (NSArray *)getCustomKeyboardWithSender:(TAPUserModel *)sender
-                              recipient:(TAPUserModel *)recipient;
-- (void)customKeyboardDidTappedWithSender:(TAPUserModel *)sender
-                                recipient:(TAPUserModel *)recipient
-                             keyboardItem:(TAPCustomKeyboardItemModel *)keyboardItem;
+- (NSArray * _Nonnull)getCustomKeyboardWithSender:(TAPUserModel * _Nonnull)sender
+                              recipient:(TAPUserModel * _Nonnull)recipient;
+- (void)customKeyboardDidTappedWithSender:(TAPUserModel * _Nonnull)sender
+                                recipient:(TAPUserModel * _Nonnull)recipient
+                             keyboardItem:(TAPCustomKeyboardItemModel * _Nonnull)keyboardItem;
 
 //Custom Bubble
-- (void)addCustomBubbleDataWithClassName:(NSString *)className type:(NSInteger)type delegate:(id)delegate;
+- (void)addCustomBubbleDataWithClassName:(NSString * _Nonnull)className type:(NSInteger)type delegate:(id _Nonnull)delegate;
 
 //Custom Quote
-- (void)quoteDidTappedWithUserInfo:(NSDictionary *)userInfo;
+- (void)quoteDidTappedWithUserInfo:(NSDictionary * _Nonnull)userInfo;
 
 //Other
 - (void)disconnect;
-- (void)logoutAndClearAllDataWithSuccess:(void (^)(void))success
-                                 failure:(void (^)(NSError *error))failure;
+- (void)logoutAndClearAllDataWithSuccess:(void (^ _Nonnull)(void))success
+                                 failure:(void (^ _Nonnull)(NSError * _Nonnull error))failure;
 - (void)clearAllData;
 
 //TapTalk Internal Usage Method
-- (void)processingProductListLeftOrSingleOptionButtonTappedWithData:(NSArray *)dataArray isSingleOption:(BOOL)isSingleOption;
-- (void)processingProductListRightOptionButtonTappedWithData:(NSArray *)dataArray isSingleOption:(BOOL)isSingleOption;
+- (void)processingProductListLeftOrSingleOptionButtonTappedWithData:(NSArray * _Nonnull)dataArray isSingleOption:(BOOL)isSingleOption;
+- (void)processingProductListRightOptionButtonTappedWithData:(NSArray * _Nonnull)dataArray isSingleOption:(BOOL)isSingleOption;
 - (void)setBadgeWithNumberOfUnreadRooms:(NSInteger)numberOfUnreadRooms;
 
 @end
-NS_ASSUME_NONNULL_END
+
