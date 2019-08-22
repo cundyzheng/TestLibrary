@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #
 
 s.name         = "TapTalk"
-s.version      = "1.0.10"
+s.version      = "1.0.11"
 s.summary      = "Powerful Chat Engine"
 
 # This description is used to generate tags and improve search results.
@@ -37,8 +37,13 @@ s.homepage     = "https://www.moselo.com"
 #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
 #
 
-s.license      = "MIT"
+#s.license      = "MIT"
 # s.license      = s.source       = { :path => '.' }
+s.license = { :type => 'MIT', :text => <<-LICENSE
+Copyright 2012
+Permission is granted to...
+LICENSE
+}
 
 
 # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -78,7 +83,8 @@ s.platform     = :ios, "10.0"
 #
 
 #   s.source       = { :path => '.' }
-s.source       = { :git => 'https://github.com/cundyzheng/TestLibrary.git', :tag => '1.0.10' }
+#    s.source       = { :git => 'git@git.taptalk.io:ios/taptalk-ios.git', :tag => '1.0.11' }
+s.source = { :http => "https://www.dropbox.com/s/dy47cml6vb5h3wp/Binaries.zip?dl=0" }
 
 # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 #
@@ -88,7 +94,7 @@ s.source       = { :git => 'https://github.com/cundyzheng/TestLibrary.git', :tag
 #  Not including the public_header_files will make all headers public.
 #
 
-s.source_files  = "TapTalk", "TapTalk/*{h,m}", "TapTalk/**/*.{h,m}", "TapTalk/**/**/*.{h,m}"
+#s.source_files  = "TapTalk", "TapTalk/*{h,m}", "TapTalk/**/*.{h,m}", "TapTalk/**/**/*.{h,m}"
 
 # s.exclude_files = "Classes/Exclude", "TapTalk/**/*.plist"
 
@@ -103,7 +109,7 @@ s.source_files  = "TapTalk", "TapTalk/*{h,m}", "TapTalk/**/*.{h,m}", "TapTalk/**
 #  non-essential files like tests, examples and documentation.
 #
 
-s.resources = "TapTalk/**/*.{png,jpeg,jpg,storyboard,xib,xcassets,ttf,otf}"
+# s.resources = "TapTalk/**/*.{png,jpeg,jpg,storyboard,xib,xcassets,ttf,otf}"
 # s.resource  = "icon.png"
 # s.resources = "Resources/*.png"
 
@@ -124,8 +130,10 @@ s.resources = "TapTalk/**/*.{png,jpeg,jpg,storyboard,xib,xcassets,ttf,otf}"
 
 #   s.vendored_frameworks = 'GooglePlacePicker.framework', 'GooglePlaces.framework', 'GoogleMaps.framework', 'GoogleMapsCore.framework'
 
-s.static_framework = true
+#s.ios.vendored_frameworks = "TapTalk/TapTalk.framework"
+#s.source_files  = "TapTalk/*.{h,m}"
 
+s.static_framework = true
 
 # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 #
@@ -153,20 +161,20 @@ s.dependency "ZSWTappableLabel", "~> 2.0"
 
 # ――― Prefix Header ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-s.prefix_header_contents ='#import "TAPConfigs.h"', '#import "TAPStyle.h"', '#import "AFNetworkActivityIndicatorManager.h"', '#import "NSUserDefaults+MPSecureUserDefaults.h"', '#import "PodAsset.h"', '#import "TapTalk.h"', '#import "TAPUtil.h"', '#import "TAPChatManager.h"', '#import "TAPConnectionManager.h"', '#import "TAPContactManager.h"', '#import "TAPContactCacheManager.h"', '#import "TAPCustomBubbleManager.h"', '#import "TAPCustomKeyboardManager.h"', '#import "TAPDataManager.h"', '#import "TAPDatabaseManager.h"', '#import "TAPEncryptorManager.h"', '#import "TAPFetchMediaManager.h"', '#import "TAPFileDownloadManager.h"', '#import "TAPFileUploadManager.h"', '#import "TAPGroupManager.h"', '#import "TAPLocationManager.h"', '#import "TAPMessageStatusManager.h"', '#import "TAPNetworkManager.h"', '#import "TAPNotificationManager.h"', '#import "TAPOldDataManager.h"', '#import "TAPStyleManager.h"', '#import "TAPGrowingTextView.h"', '#import "TAPImageView.h"', '#import "TAPSearchBarView.h"', '#import "UIImage+Color.h"'
+s.prefix_header_contents ='#import "Configs.h"', '#import "TAPStyle.h"', '#import "AFNetworkActivityIndicatorManager.h"', '#import "NSUserDefaults+MPSecureUserDefaults.h"', '#import "PodAsset.h"', '#import "TapTalk.h"', '#import "TAPUtil.h"', '#import "TAPChatManager.h"', '#import "TAPConnectionManager.h"', '#import "TAPContactManager.h"', '#import "TAPContactCacheManager.h"', '#import "TAPCustomBubbleManager.h"', '#import "TAPCustomKeyboardManager.h"', '#import "TAPDataManager.h"', '#import "TAPDatabaseManager.h"', '#import "TAPEncryptorManager.h"', '#import "TAPFetchMediaManager.h"', '#import "TAPFileDownloadManager.h"', '#import "TAPFileUploadManager.h"', '#import "TAPGroupManager.h"', '#import "TAPLocationManager.h"', '#import "TAPMessageStatusManager.h"', '#import "TAPNetworkManager.h"', '#import "TAPNotificationManager.h"', '#import "TAPOldDataManager.h"', '#import "TAPStyleManager.h"', '#import "TAPGrowingTextView.h"', '#import "TAPImageView.h"', '#import "TAPSearchBarView.h"', '#import "UIImage+Color.h"'
 
 # ――― Bundle ------―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-s.resource_bundles = {
-'TapTalk' => [
-'Pod/**/*.xib',
-'Pod/**/*.storyboard',
-'Pod/**/*.{png,jpeg,jpg,xcassets,ttf,otf,caf}',
-'TapTalk/**/*.xib',
-'TapTalk/**/*.storyboard',
-'TapTalk/**/*.{png,jpeg,jpg,xcassets,ttf,otf,caf}'
-]
-}
+#  s.resource_bundles = {
+#      'TapTalk' => [
+#          'Pod/**/*.xib',
+#          'Pod/**/*.storyboard',
+#           'Pod/**/*.{png,jpeg,jpg,xcassets,ttf,otf,caf}',
+#           'TapTalk/**/*.xib',
+#           'TapTalk/**/*.storyboard',
+#           'TapTalk/**/*.{png,jpeg,jpg,xcassets,ttf,otf,caf}'
+#       ]
+#   }
 
 
 # ――― XCConfig ------―――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
