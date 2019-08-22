@@ -12,9 +12,9 @@
 //@import AFNetworking;
 //@import GooglePlaces;
 //@import GoogleMaps;
-#import <AFNetworking/AFNetworking.h>
-#import <GooglePlaces/GooglePlaces.h>
-#import <GoogleMaps/GoogleMaps.h>
+#import "AFNetworking/AFNetworking.h"
+#import "GooglePlaces/GooglePlaces.h"
+#import "GoogleMaps/GoogleMaps.h"
 
 @interface TapTalk () <TAPNotificationManagerDelegate>
 

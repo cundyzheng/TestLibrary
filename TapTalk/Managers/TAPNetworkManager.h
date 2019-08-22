@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 //@import AFNetworking;
-#import <AFNetworking/AFNetworking.h>
+#import "AFNetworking/AFNetworking.h"
 
 #define NETWORK_MANAGER_NO_CONNECTION_NOTIFICATION_KEY @"Prefs.NetworkManagerNoConnectionNotificationKey"
 

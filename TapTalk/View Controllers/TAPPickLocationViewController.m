@@ -13,8 +13,8 @@
 
 //@import GooglePlaces;
 //@import GoogleMaps;
-#import <GooglePlaces/GooglePlaces.h>
-#import <GoogleMaps/GoogleMaps.h>
+#import "GooglePlaces/GooglePlaces.h"
+#import "GoogleMaps/GoogleMaps.h"
 
 
 @interface TAPPickLocationViewController () <TAPLocationSearchBarViewDelegate, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>

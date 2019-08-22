@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <SocketRocket/SocketRocket.h>
+#import "SocketRocket/SocketRocket.h"
 
 typedef NS_ENUM(NSInteger, TAPConnectionManagerStatusType) {
     TAPConnectionManagerStatusTypeNotConnected = 0,

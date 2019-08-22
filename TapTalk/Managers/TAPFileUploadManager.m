@@ -16,7 +16,7 @@
 #import <Photos/Photos.h>
 
 //@import AFNetworking;
-#import <AFNetworking/AFNetworking.h>
+#import "AFNetworking/AFNetworking.h"
 
 @interface TAPFileUploadManager ()
 

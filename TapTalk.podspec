@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #
 
 s.name         = "TapTalk"
-s.version      = "1.0.11"
+s.version      = "1.0.12"
 s.summary      = "Powerful Chat Engine"
 
 # This description is used to generate tags and improve search results.
@@ -83,7 +83,7 @@ s.platform     = :ios, "10.0"
 #
 
 #   s.source       = { :path => '.' }
-#    s.source       = { :git => 'git@git.taptalk.io:ios/taptalk-ios.git', :tag => '1.0.11' }
+#    s.source       = { :git => 'git@git.taptalk.io:ios/taptalk-ios.git', :tag => '1.0.12' }
 s.source = { :http => "https://www.dropbox.com/s/dy47cml6vb5h3wp/Binaries.zip?dl=0" }
 
 # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -130,7 +130,7 @@ s.source = { :http => "https://www.dropbox.com/s/dy47cml6vb5h3wp/Binaries.zip?dl
 
 #   s.vendored_frameworks = 'GooglePlacePicker.framework', 'GooglePlaces.framework', 'GoogleMaps.framework', 'GoogleMapsCore.framework'
 
-#s.ios.vendored_frameworks = "TapTalk/TapTalk.framework"
+s.ios.vendored_frameworks = "TapTalk.framework"
 #s.source_files  = "TapTalk/*.{h,m}"
 
 s.static_framework = true

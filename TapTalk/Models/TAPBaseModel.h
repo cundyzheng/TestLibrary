@@ -7,7 +7,7 @@
 //
 
 //@import JSONModel;
-#import <JSONModel/JSONModel.h>
+#import "JSONModel/JSONModel.h"
 
 @interface TAPBaseModel : JSONModel
 
